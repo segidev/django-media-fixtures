@@ -19,10 +19,12 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+
 def read(*parts):
     # intentionally *not* adding an encoding option to open, See:
     #   https://github.com/pypa/virtualenv/issues/201#issuecomment-3145690
     return codecs.open(os.path.join(here, *parts), 'r').read()
+
 
 def find_version(*file_paths):
     version_file = read(*file_paths)
@@ -30,21 +32,22 @@ def find_version(*file_paths):
                               version_file, re.M)
     if version_match:
         return version_match.group(1)
-    raise RuntimeError("Unable to find version string.")    
+    raise RuntimeError("Unable to find version string.")
+
 
 setup(
-    name='django-media-fixtures',
+    name='django-media-fixtures-next',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version=find_version('django_media_fixtures','__init__.py'),
+    version=find_version('django_media_fixtures', '__init__.py'),
 
     description='Simple project to copy media files (intended for fixtures loads), pretty much as Django staticfiles does',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/adrianoveiga/django-media-fixtures.git',
+    url='https://github.com/segidev/django-media-fixtures',
 
     # Author details
     author='Adriano Veiga',
