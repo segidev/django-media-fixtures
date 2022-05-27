@@ -25,6 +25,11 @@ django-media-fixtures
 
 Simple project to copy media files (intended for fixtures loads) to the file storage, pretty much as the `django.contrib.staticfiles` app does.
 
+**Hint: This is a fork of the original package which is no longer maintained**
+
+Changelog
+---------------------
+- 1.0.1: Include PR to fix Django 4 smart_text exceptions
 
 Dependencies
 ------------
@@ -40,7 +45,7 @@ Installation
 
 .. code-block:: python
 
-   pip install django-media-fixtures==1.0.0
+   pip install django-media-fixtures==1.0.1
 
 Then, add the ``django_media_fixtures`` app in your ``settings.INSTALLED_APPS``:
 
