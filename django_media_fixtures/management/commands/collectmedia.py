@@ -29,6 +29,8 @@ class Command(BaseCommand):
             MEDIA_FIXTURE_FOLDERNAME = 'media_fixtures'
     """
     help = "Collect media (fixtures) files in a single location."
+    
+    """Modified the following line to resolve 'typeerror: requires_system_checks must be a list or tuple' for users facing issues in django versions >= 4.1"""
     # requires_system_checks = False
     requires_system_checks = []
 
