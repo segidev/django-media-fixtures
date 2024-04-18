@@ -29,7 +29,8 @@ class Command(BaseCommand):
             MEDIA_FIXTURE_FOLDERNAME = 'media_fixtures'
     """
     help = "Collect media (fixtures) files in a single location."
-    requires_system_checks = False
+    # requires_system_checks = False
+    requires_system_checks = []
 
     def __init__(self, *args, **kwargs):
         super(Command, self).__init__(*args, **kwargs)
